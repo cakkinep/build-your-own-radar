@@ -14,7 +14,7 @@ COPY ./default.template /etc/nginx/conf.d/default.conf
 
 
 RUN chown -R nginx:nginx /opt/build-your-own-radar && chmod -R 755 /opt/build-your-own-radar && \
-	chown -R nginx:nginx /var/cache/nginx && 
+	chown -R nginx:nginx /var/cache/nginx &&\ 
         chown -R nginx:nginx /var/log/nginx && \
         chown -R nginx:nginx /etc/nginx/conf.d
 
