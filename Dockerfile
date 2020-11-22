@@ -10,7 +10,7 @@ WORKDIR /opt/build-your-own-radar
 COPY --from=source /src/build-your-own-radar/dist .
 # COPY default.template /etc/nginx/conf.d/default.conf
 # COPY ./nginx.conf /etc/nginx/nginx.conf
-#COPY ./default.template /etc/nginx/conf.d/default.conf
+COPY ./default.template /etc/nginx/conf.d/default.conf
 
 
 #RUN chown -R nginx:nginx /opt/build-your-own-radar && chmod -R 755 /opt/build-your-own-radar && \
