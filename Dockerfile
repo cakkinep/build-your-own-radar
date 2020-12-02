@@ -5,7 +5,7 @@ RUN npm install
 COPY . ./
 RUN npm run build
 
-FROM nginx-unprivileged:latest 
+FROM nginxinc/nginx-unprivileged:latest 
 WORKDIR /opt/build-your-own-radar
 COPY --from=source /src/build-your-own-radar/dist .
 # COPY default.template /etc/nginx/conf.d/default.conf
